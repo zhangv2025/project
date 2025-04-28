@@ -65,3 +65,18 @@ ul li {
   font-size: 1.2rem;
   color: #666;
 }
+.image-placeholder {
+  width: 400px; /* limit the width of the box */
+  height: 300px; /* limit the height of the box */
+  overflow: hidden; /* crop any part of the image that is too big */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* optional: light background */
+  border: 1px solid #ccc; /* optional: border around the placeholder */
+}
+
+.image-placeholder img {
+  width: 100%; /* make image fit the width */
+  height: auto; /* maintain aspect ratio */
+}
