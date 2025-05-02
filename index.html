@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Does Living Alone Impair Emotional Perception?</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-buttons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .nav-buttons a {
+      background: white;
+      color: #111;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <nav style="position: fixed; top: 20px; right: 20px; z-index: 10;">
-      <a href="#overview" style="background: white; color: #111; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.1);">Skip to Content</a>
+    <nav class="nav-buttons">
+      <a href="#overview">Overview</a>
+      <a href="#narrative">Narrative</a>
+      <a href="#accuracy">Accuracy</a>
+      <a href="#brain">Brain</a>
+      <a href="#illustration">Illustration</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#sources">Sources</a>
     </nav>
 
     <section class="hero visible">
@@ -33,7 +60,11 @@
     </div>
     <p class="caption">The proportion of one-person households in the U.S. has more than tripled from 7.7% in 1940 to 27.6% in 2020, highlighting a significant societal shift towards solitary living.</p>
 
-    <section class="content-block">
+    <div class="image-block">
+      <img src="photo1.jpg" alt="City Sketch Illustration">
+    </div>
+
+    <section class="content-block" id="narrative">
       <div>
         <h2>Scroll-Based Visual Narrative</h2>
         <ul>
@@ -49,7 +80,7 @@
       <img src="photo8.jpg" alt="Page3">
     </div>
 
-    <section class="content-block">
+    <section class="content-block" id="accuracy">
       <div>
         <h2>Emotion Recognition Accuracy</h2>
         <p>This chart compares the average emotion recognition accuracy between two groups: <strong>individuals who live alone</strong> and <strong>those who live in shared households</strong>.</p>
@@ -61,7 +92,7 @@
       <img src="photo4.jpg" alt="Page4">
     </div>
 
-    <section class="content-block">
+    <section class="content-block" id="brain">
       <div>
         <h2>Simulated Brain Activation</h2>
         <p>This simulated fMRI heatmap visualizes brain activity during emotional recognition tasks in response to mixed, positive, and negative stimuli.</p>
@@ -74,7 +105,7 @@
     </div>
     <p class="caption">Simulated fMRI heatmap based on reference activation patterns in emotion recognition studies. Color gradient represents activation intensity.</p>
 
-    <section class="content-block">
+    <section class="content-block" id="illustration">
       <div>
         <h2>Symbolic Illustration</h2>
         <p>This symbolic illustration contrasts <strong>emotional isolation</strong> with <strong>emotional engagement</strong>. The left side reflects stillness and disconnection, while the right side displays dynamic emotional reciprocity.</p>
@@ -87,7 +118,7 @@
     </div>
     <p class="caption">Symbolic reconstruction based on emotional mirroring behavior studies.</p>
 
-    <section class="content-block">
+    <section class="content-block" id="reflection">
       <div>
         <h2>Reflection</h2>
         <p>We often think of empathy as something we <strong>have</strong>. But maybe empathy is something we <em>practice</em>.</p>
@@ -99,7 +130,7 @@
       <img src="photo7.jpg" alt="Page7">
     </div>
 
-    <section class="content-block">
+    <section class="content-block" id="sources">
       <div>
         <h2>Sources & References</h2>
         <ul>
