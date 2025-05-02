@@ -169,11 +169,15 @@ hr {
   z-index: 10;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.2;
+  display: flex;
+  flex-direction: column;
 }
+
 .nav-buttons:hover {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
 }
+
 .nav-buttons a {
   display: block;
   background: white;
@@ -188,6 +192,7 @@ hr {
   white-space: nowrap;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 .nav-buttons a.active {
   background: #111;
   color: #fff;
@@ -215,19 +220,21 @@ hr {
 
 @media screen and (max-width: 767px) {
   .nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     top: auto;
     bottom: 0;
     left: 0;
     right: 0;
-    transform: none;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.5rem 0;
-    border-radius: 0;
     width: 100%;
-    opacity: 1;
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    opacity: 1;
   }
+
   .nav-buttons a {
     margin: 0 0.4rem;
     font-size: 0.75rem;
