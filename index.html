@@ -35,28 +35,10 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
       font-size: 0.85rem;
       white-space: nowrap;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .nav-buttons a.active {
-      background: #111;
-      color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.25);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <nav class="nav-buttons">
-      <a href="#overview" id="btn-overview">Overview</a>
-      <a href="#narrative" id="btn-narrative">Narrative</a>
-      <a href="#accuracy" id="btn-accuracy">Accuracy</a>
-      <a href="#brain" id="btn-brain">Brain</a>
-      <a href="#illustration" id="btn-illustration">Illustration</a>
-      <a href="#reflection" id="btn-reflection">Reflection</a>
-      <a href="#sources" id="btn-sources">Sources</a>
-    </nav>
-
-    <body>
   <div class="container">
     <nav class="nav-buttons">
       <a href="#overview">Overview</a>
@@ -192,30 +174,5 @@
       observer.observe(section);
     });
   </script>
-</body>
-
-    <script>
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('.nav-buttons a');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Highlight matching button
-            navLinks.forEach(link => {
-              link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-            });
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.5
-      });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    </script>
-  </div>
 </body>
 </html>
