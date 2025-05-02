@@ -38,7 +38,7 @@ section.visible {
 
 .hero {
   text-align: center;
-  padding: 6rem 0;
+  padding: 3rem 0; /* reduced padding */
 }
 
 .hero h1 {
@@ -72,8 +72,9 @@ section.visible {
 .image-block img {
   width: 100%;
   height: auto;
+  max-height: 500px;
   display: block;
-  object-fit: cover;
+  object-fit: contain; /* show full image without cropping */
 }
 
 .content-block {
