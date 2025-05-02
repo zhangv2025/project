@@ -222,7 +222,7 @@ hr {
   .nav-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     top: auto;
     bottom: 0;
     left: 0;
@@ -233,7 +233,18 @@ hr {
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0;
     opacity: 1;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
   }
+
+  .nav-buttons a {
+    flex: 0 0 auto;
+    margin: 0 0.4rem;
+    font-size: 0.75rem;
+  }
+}
 
   .nav-buttons a {
     margin: 0 0.4rem;
