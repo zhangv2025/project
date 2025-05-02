@@ -223,10 +223,11 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    top: auto;
+    top: auto !important;
     bottom: 0;
     left: 0;
     right: 0;
+    transform: none !important;
     width: 100%;
     padding: 0.5rem 0;
     background: rgba(255, 255, 255, 0.95);
@@ -236,8 +237,19 @@ hr {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
+
+  .nav-buttons a {
+    flex: 0 0 auto;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
 
   .nav-buttons a {
     flex: 0 0 auto;
