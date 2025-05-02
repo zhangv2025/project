@@ -155,7 +155,27 @@ hr {
   border-top: 1px solid #eee;
   margin: 5rem 0;
 }
-
+@media screen and (max-width: 768px) {
+  .nav-buttons {
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    opacity: 1;
+  }
+  .nav-buttons a {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .content-block {
     flex-direction: row;
@@ -174,3 +194,4 @@ hr {
     font-size: 1.75rem;
   }
 }
+
