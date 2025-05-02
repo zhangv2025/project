@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <section class="hero">
+    <section class="hero visible">
       <h1>DOES LIVING ALONE IMPAIR EMOTIONAL PERCEPTION?</h1>
       <h2>A Data Storytelling Project Exploring Emotional Recognition in Solitude</h2>
       <p class="author">Vanna Zhang</p>
     </section>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Overview</h2>
         <p>This project explores a counterintuitive hypothesis: <strong>Long-term solitary living may reduce a person’s ability to recognize emotions in others.</strong></p>
@@ -33,7 +33,7 @@
       <img src="photo1.jpg" alt="City Sketch Illustration">
     </div>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Scroll-Based Visual Narrative</h2>
         <ul>
@@ -49,7 +49,7 @@
       <img src="photo8.jpg" alt="Page3">
     </div>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Emotion Recognition Accuracy</h2>
         <p>This chart compares the average emotion recognition accuracy between two groups: <strong>individuals who live alone</strong> and <strong>those who live in shared households</strong>.</p>
@@ -61,7 +61,7 @@
       <img src="photo4.jpg" alt="Page4">
     </div>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Simulated Brain Activation</h2>
         <p>This simulated fMRI heatmap visualizes brain activity during emotional recognition tasks in response to mixed, positive, and negative stimuli.</p>
@@ -74,7 +74,7 @@
     </div>
     <p class="caption">Simulated fMRI heatmap based on reference activation patterns in emotion recognition studies. Color gradient represents activation intensity.</p>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Symbolic Illustration</h2>
         <p>This symbolic illustration contrasts <strong>emotional isolation</strong> with <strong>emotional engagement</strong>. The left side reflects stillness and disconnection, while the right side displays dynamic emotional reciprocity.</p>
@@ -87,7 +87,7 @@
     </div>
     <p class="caption">Symbolic reconstruction based on emotional mirroring behavior studies.</p>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Reflection</h2>
         <p>We often think of empathy as something we <strong>have</strong>. But maybe empathy is something we <em>practice</em>.</p>
@@ -99,7 +99,7 @@
       <img src="photo7.jpg" alt="Page7">
     </div>
 
-    <section class="content-block visible">
+    <section class="content-block">
       <div>
         <h2>Sources & References</h2>
         <ul>
@@ -114,5 +114,23 @@
       </div>
     </section>
   </div>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
